@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="fileAppender" class="ch.qos.logback.core.FileAppender">
+        <file>c:/myLogFile.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d [%thread] %-5level  %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%-5relative %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+   
+    <logger name="org.copperengine.core.instrument" level="INFO"
+            additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <logger name="org.copperengine.core.wfrepo" level="INFO"
+            additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <logger name="org.copperengine.core.persistent.hybrid.StorageCache" level="INFO"
+            additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+    <logger name="stat" level="INFO"
+             additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+   
+    <root level="ERROR">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

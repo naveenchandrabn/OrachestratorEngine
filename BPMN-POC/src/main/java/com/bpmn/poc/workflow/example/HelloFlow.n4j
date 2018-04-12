@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flow visibility="Public">
+    <nodes>
+        <node uuid="jtwQV.89kbcAAAFJ2mwMBXff" name="Start" x="343" y="30" type="START">
+            <parameters/>
+            <config>
+                <parameter key="SYS_START_NODE_TYPE" value="PUBLIC"/>
+            </config>
+            <transitions>
+                <transition uuid="4sUQV.89OzYAAAFJOUoMBXgL" name="NEXT" toNode="xGIQV.89OY4AAAFJcDIMBXgL"/>
+            </transitions>
+        </node>
+        <node uuid="bbsQV.89Lh8AAAFJ5IoMBXff" name="END" x="343" y="263" type="END">
+            <parameters/>
+            <config/>
+            <transitions/>
+        </node>
+        <node uuid="xGIQV.89OY4AAAFJcDIMBXgL" name="HelloWorld" x="334" y="153" type="CUSTOM">
+            <parameters/>
+            <config>
+                <parameter key="SWF_CUSTOM_CLASS" value="com.bpmn.poc.example.HelloWorld"/>
+            </config>
+            <transitions>
+                <transition uuid="SHIQV.89iVMAAAFJE1UMBXgL" name="NEXT" toNode="bbsQV.89Lh8AAAFJ5IoMBXff"/>
+                <transition uuid="0qDAqAIGQaUAAAFYgwJiXAbc" name="ERROR" toNode="YoDAqAIGbUIAAAFYleBiXAbb">
+                </transition>
+            </transitions>
+        </node>
+        <node uuid="YoDAqAIGbUIAAAFYleBiXAbb" name="ERROR" x="498" y="258" type="END">
+            <parameters/>
+            <config/>
+            <transitions/>
+        </node>
+    </nodes>
+</flow>
