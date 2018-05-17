@@ -60,7 +60,7 @@ public class DataCreator {
             final LoadTestData data = new LoadTestData();
             data.id = id;
             data.someData = payload;
-            final WorkflowInstanceDescr<LoadTestData> wfInstanceDescr = new WorkflowInstanceDescr<LoadTestData>("org.copperengine.core.persistent.cassandra.loadtest.workflows.LoadTestWorkflow", data, id, 1, null);
+            final WorkflowInstanceDescr<LoadTestData> wfInstanceDescr = new WorkflowInstanceDescr<LoadTestData>("org.copperengine.core.persistent.JBossDataGrid.loadtest.workflows.LoadTestWorkflow", data, id, 1, null);
             engine.run(wfInstanceDescr);
         }
     }
